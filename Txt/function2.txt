@@ -1,0 +1,33 @@
+public boolean Matched(String doc , String query){
+        if(doc.trim().toLowerCase().contains(query.trim().toLowerCase()))
+                {
+                    return true;
+                }
+        else{
+            return false;
+        }
+    }
+
+--------------------------------------------------
+
+
+in action in Gui
+
+
+String result = Task3(text1.getText(), query.getText())+"\n"+Task3(text2.getText(), query.getText())+"\n"
+                +Task3(text3.getText(), query.getText())+"\n"+Task3(text4.getText(), query.getText())+"\n";
+        String match = "";
+        if(Matched(text1.getText(), query.getText())){
+            match+="document 1 is matched";
+        }
+        if(Matched(text2.getText(), query.getText())){
+            match+="\ndocument 2 is matched\n";
+        }
+        if(Matched(text3.getText(), query.getText())){
+            match+="document 3 is matched\n";
+        }
+        if(Matched(text4.getText(), query.getText())){
+            match+="document 4 is matched";
+        }
+        tarea.setText(result+"\n"+match);
+    }               

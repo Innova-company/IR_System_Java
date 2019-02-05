@@ -1,0 +1,20 @@
+ public  String Task3(String doc, String query) {
+        String[] doc1 = doc.trim().split(" ");
+
+        //System.out.println("enter your query");//
+        String[] result = query.trim().split(" ");
+
+        String temp = "";
+        String last = "";
+        for (int i = 0; i < result.length; i++) {
+            for (int j = 0; j < doc1.length; j++) {
+                if (doc1[j].equalsIgnoreCase(result[i])) {
+                    temp += String.valueOf(j) + ",";
+                }
+
+            }
+            last += result[i] + "->" + temp + "\n";
+            temp = "";
+        }
+        return last;
+    }

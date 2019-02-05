@@ -1,0 +1,12 @@
+           boolean check =  true;
+           while (check)
+           {
+            if(quList[afterOr].equals(""))
+            {
+                    check = false;
+            }
+            else
+            {
+                afterOr++;
+            }
+           }
